@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "CloudFormation Stack para criar uma instância EC2 simples."
+
+Resources:
+  MyEC2Instance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      InstanceType: "t3.micro"
+      ImageId: "ami-053a45fff0a704a47" # Amazon Linux 2023 AMI (64-bit (x86), uefi-preferred)
+      Tags:
+        - Key: "Name"
+          Value: "ec2-learner-lab"

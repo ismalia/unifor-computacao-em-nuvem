@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Autenticando no ECR..."
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 891612572336.dkr.ecr.us-east-1.amazonaws.com
+
+  build:
+    commands:
+      - echo "Construindo a imagem Docker..."
+      - docker build -t autodeployment:latest -t 891612572336.dkr.ecr.us-east-1.amazonaws.com/ecr-autodeployment:latest -f ./atividade-avaliativa/Dockerfile ./atividade-avaliativa
+
+  post_build:
+    commands:
+      - echo "Enviando a imagem para o ECR..."
+      - docker push 891612572336.dkr.ecr.us-east-1.amazonaws.com/ecr-autodeployment:latest
+      - echo "Gerando arquivo imagedefinitions.json..."
+      - printf '[{"name":"autodeployment","imageUri":"891612572336.dkr.ecr.us-east-1.amazonaws.com/ecr-autodeployment:latest"}]' > imagedefinitions.json
+      - echo "Build finalizado com sucesso!"
+
+artifacts:
+  files:
+    - imagedefinitions.json

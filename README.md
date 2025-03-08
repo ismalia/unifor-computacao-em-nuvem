@@ -2,6 +2,53 @@
 
 Repositório dedicado à disciplina ***Computação em Nuvem***, ministrada pelo professor Marcondes Josino Alexandre na Especialização em Engenharia de Software com DevOps, curso de pós-graduação lato sensu da Universidade de Fortaleza (UNIFOR).
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Índice**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Atividade avaliativa](#atividade-avaliativa)
+  - [Equipe](#equipe)
+  - [Projeto: AutoDeployment](#projeto-autodeployment)
+  - [Descrição do fluxo CI/CD / Diagrama da arquitetura](#descri%C3%A7%C3%A3o-do-fluxo-cicd--diagrama-da-arquitetura)
+  - [Prints das configurações do pipeline](#prints-das-configura%C3%A7%C3%B5es-do-pipeline)
+    - [Construção da Aplicação: AWS CodeBuild](#constru%C3%A7%C3%A3o-da-aplica%C3%A7%C3%A3o-aws-codebuild)
+      - [Configuration](#configuration)
+      - [Project configuration](#project-configuration)
+      - [Source](#source)
+      - [Environment](#environment)
+      - [Buildspec](#buildspec)
+      - [Batch configuration](#batch-configuration)
+      - [Artifacts](#artifacts)
+      - [Logs](#logs)
+    - [Registro da imagem: Amazon ECR](#registro-da-imagem-amazon-ecr)
+      - [Imagens](#imagens)
+    - [Orquestração: AWS ECS (Fargate)](#orquestra%C3%A7%C3%A3o-aws-ecs-fargate)
+      - [Task overview](#task-overview)
+      - [Configuration](#configuration-1)
+      - [Containers](#containers)
+    - [Implantação automatizada: AWS CodePipeline](#implanta%C3%A7%C3%A3o-automatizada-aws-codepipeline)
+      - [Stage 1: Source](#stage-1-source)
+        - [Resumo](#resumo)
+        - [Entrada](#entrada)
+        - [Saída](#sa%C3%ADda)
+      - [Stage 2: Build](#stage-2-build)
+        - [Resumo](#resumo-1)
+        - [Entrada](#entrada-1)
+        - [Saída](#sa%C3%ADda-1)
+      - [Stage 3: Deploy](#stage-3-deploy)
+        - [Resumo](#resumo-2)
+        - [Entrada](#entrada-2)
+        - [Saída](#sa%C3%ADda-2)
+    - [Monitoramento: CloudWatch Logs](#monitoramento-cloudwatch-logs)
+      - [Logs da aplicação](#logs-da-aplica%C3%A7%C3%A3o)
+  - [Arquitetura](#arquitetura)
+    - [GitHub como repositório de código](#github-como-reposit%C3%B3rio-de-c%C3%B3digo)
+    - [AWS CodePipeline](#aws-codepipeline)
+    - [AWS CodeBuild](#aws-codebuild)
+    - [Amazon ECR (Elastic Container Registry)](#amazon-ecr-elastic-container-registry)
+    - [Amazon ECS (Elastic Container Service) com Fargate](#amazon-ecs-elastic-container-service-com-fargate)
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Atividade avaliativa
 
 ### Equipe

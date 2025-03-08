@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block content %}
+<br />
+<div class="jumbotron">
+  <h1><img src="/static/img/flask.png" height="80px" /> Versão 1.5</h1>
+
+  <div class="lead">
+    Esta é uma aplicação web simples escrita em Python - Flask. Foi desenvolvida para servir de demonstração da
+    utilização de contêineres na nuvem. Ideal para cenários onde a automação da implantação é essencial, proporcionando
+    uma solução rápida e leve para executar e implantar na forma de teste de deploy.
+  </div>
+  <br />
+
+  <div class="dimmed-box">
+    <p>
+      <img src="static/img/github-2.svg" class="icon" />
+      <a href="https://gitlab.com/PedroLMaia/AutoDeployment-CI" class="btn btn-info btn px-4"> GitHub </a>
+
+      &nbsp;&nbsp;&nbsp;
+      <img src="static/img/docker-whale.svg" class="icon" />
+      <a href="https://hub.docker.com/r/pedrolmaia/autodeployment-ci" class="btn btn-info btn">
+        Imagem Docker
+      </a>
+    </p>
+    <hr />
+    <p>
+      <img src="static/img/python.svg" class="icon" />
+      <a class="btn btn-info btn" href="https://azure.microsoft.com/pt-br/resources/developers/python/">
+        Comece a usar o Azure com Python.
+      </a>
+    </p>
+
+    <br />
+  </div>
+</div>
+{% endblock %}

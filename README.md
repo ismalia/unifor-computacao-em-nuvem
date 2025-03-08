@@ -129,7 +129,7 @@ flowchart TB
 
 ![Logs](atividade-avaliativa/images/CodeBuild/logs.png)
 
-```log
+```bash
 [Container] 2025/03/08 23:03:46.050806 Running on CodeBuild On-demand
 [Container] 2025/03/08 23:03:46.050819 Waiting for agent ping
 [Container] 2025/03/08 23:03:46.152081 Waiting for DOWNLOAD_SOURCE

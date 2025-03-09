@@ -51,6 +51,8 @@ Repositório dedicado à disciplina ***Computação em Nuvem***, ministrada pelo
 
 ## Atividade avaliativa
 
+Cenário escolhido: #2 (Pipeline CI/CD na AWS)
+
 ### Equipe
 
 - Ismália Dulce Gonçalves Santiago (2328703)
